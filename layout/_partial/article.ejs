@@ -1,0 +1,59 @@
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span><%= post.title %></span></h3>
+    </header>
+    <p class="post-meta text-center">
+        <%- post.author || '辛修灿' %> 发表于
+        <%- partial('post/date', { date_format: 'YYYY-MM-DD' }) %>
+    </p>
+    <div class="post-content">
+        <%- post.content %>
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <%-
+            list_categories(post.categories, {
+                show_count: false,
+                class: 'cat',
+                style: 'none',
+                separator: '|'
+            })
+            %>
+        </span>
+        <span class="post-tags">
+            标签：
+            <%- partial('post/tag') %>
+        </span>
+    </p>
+</article>
+
+<p class="text-center">
+  <img style="border: 1px solid #eee; padding: 0; border-radius: 3px;" src="http://osausq2jb.bkt.clouddn.com/20170701215829.png">
+</p>
+
+<p class="text-center">
+  <img style="width: 250px; height: 250px; border: 1px solid #eee; padding: 0; border-radius: 3px;" src="http://osausq2jb.bkt.clouddn.com/20170701214754.png">
+&nbsp;&nbsp;&nbsp;&nbsp;
+  <img style="width: 250px; height: 250px; border: 1px solid #eee; padding: 0; border-radius: 3px;" src="http://osausq2jb.bkt.clouddn.com/20170701214718.png">
+</p>
+
+
+<div class="article-share clearfix text-center">
+    <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</div>
+
+
+
+<br/><br/><br/><hr/>
+
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2137555"></script>
+<!-- UY END -->
+
+
+
+
+
